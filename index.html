@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Train Scheduler</title>
+</head>
+
+<body>
+
+  <div class="jumbotron bg-dark text-light text-center">
+    <h1>
+      Train Scheduler
+    </h1>
+  </div>
+  <div class="container" id="main-info-panel">
+    <div class="card mb-4 border-dark">
+      <h4 class="card-header bg-dark text-light">Employee Tracker</h4>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency (Minutes)</th>
+              <th scope="col">Next Arrival Time</th>
+              <th scope="col">Time until Arrival (Minutes)</th>
+            </tr>
+          </thead>
+          <tbody id="train-info">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card mb-4 border-dark">
+      <h4 class="card-header text-light bg-dark">
+        Add another train
+      </h4>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Train Name</label>
+            <input type="text" class="form-control" id="name-input" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="role">Destination</label>
+            <input type="text" class="form-control" id="destination-input" placeholder="Enter Destination">
+          </div>
+          <div class="form-group">
+            <label for="start">First Train (HH:MM Military Time)</label>
+            <input type="text" class="form-control" id="first-arrival-input" placeholder="Time of arrival">
+          </div>
+          <div class="form-group">
+            <label for="rate">Frequency (minutes)</label>
+            <input type="number" class="form-control" id="frequency-input" placeholder="Frequency">
+          </div>
+
+          <button type="submit" class="btn btn-outline-primary" id="submit-btn">Add Train</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
